@@ -1,0 +1,23 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/chat/handoff/route": "app/api/chat/handoff/route.js",
+  "/api/company/route": "app/api/company/route.js",
+  "/api/chat/response/route": "app/api/chat/response/route.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/api/monitoring-signup/route": "app/api/monitoring-signup/route.js",
+  "/api/products/[id]/route": "app/api/products/[id]/route.js",
+  "/api/products/compare/route": "app/api/products/compare/route.js",
+  "/api/products/route": "app/api/products/route.js",
+  "/api/support/route": "app/api/support/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/page": "app/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/monitoring/signup/page": "app/monitoring/signup/page.js",
+  "/products/[productId]/page": "app/products/[productId]/page.js",
+  "/products/compare/page": "app/products/compare/page.js",
+  "/products/page": "app/products/page.js",
+  "/services/page": "app/services/page.js",
+  "/support/page": "app/support/page.js"
+}

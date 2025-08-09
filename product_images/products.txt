@@ -1,0 +1,99 @@
+GV-GEBN4800 | Category: Eyeball | Filters: 4MP, Fixed, AI, AI-ISP, Full Color, WDR Pro, 3 Axis, IP67, IK10
+GV-REB5800 | Category: Eyeball | Filters: 5MP, Fixed, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-GEB4900 | Category: Eyeball | Filters: 4MP, Fixed, Cloud, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-GEBF4911 | Category: Eyeball | Filters: 4MP, Motorized, Cloud, AI, Full Color, Active Deterrence, Super Low Lux, WDR Pro, 3 Axis, IP66, IK10
+GV-EBFC5800 | Category: Eyeball | Filters: 5MP, Fixed, AI, UL, Full Color, Super Low Lux, WDR Pro, 3 Axis, IP67
+GV-EBD8813 | Category: Eyeball | Filters: 8MP, Motorized, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-EBD4813 | Category: Eyeball | Filters: 4MP, Motorized, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-EBD8800 | Category: Eyeball | Filters: 8MP, Fixed, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67
+GV-EBD4704 | Category: Eyeball | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, IP67
+GV-EBD4701 | Category: Eyeball | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, IP67
+GV-EBD4700 | Category: Eyeball | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, IP67
+GV-EBD2705 | Category: Eyeball | Filters: 2MP, Fixed, UL, WDR Pro, 3 Axis, IP67
+GV-EBD2704 | Category: Eyeball | Filters: 2MP, Fixed, UL, WDR Pro, 3 Axis, IP67
+GV-GVD4910 | Category: Dome | Filters: 4MP, Motorized, Cloud, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-GDR4900 | Category: Dome | Filters: 4MP, Fixed, Cloud, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TFD4800 | Category: Dome | Filters: 4MP, Fixed, AI, UL, Super Low Lux, WDR Pro, 3 Axis, Pigtail-Free
+GV-TFD4700 | Category: Dome | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, Pigtail-Free
+GV-VD8700 | Category: Dome | Filters: 8MP, Vari-Focal, Face Recognition, 3 Axis, IP66, IK10
+GV-MD8710-FD | Category: Dome | Filters: 8MP, Motorized, Face Detection, Super Low Lux, WDR Pro, 3 Axis
+GV-TDR8805 | Category: Dome | Filters: 8MP, Fixed, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR4803 | Category: Dome | Filters: 4MP, Fixed, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR4704 Series | Category: Dome | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR4702 Series | Category: Dome | Filters: 4MP, Fixed, UL, Super Low Lux, IP67, IK10
+GV-TDR4700 Series | Category: Dome | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR2705 | Category: Dome | Filters: 2MP, Fixed, UL, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR2704 Series | Category: Dome | Filters: 2MP, Fixed, UL, WDR Pro, 3 Axis, IP67, IK10
+GV-TDR2702 Series | Category: Dome | Filters: 2MP, Fixed, UL, IP67, IK10
+GV-TVD8810 | Category: Dome | Filters: 8MP, Motorized, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TVD8710 | Category: Dome | Filters: 8MP, Motorized, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TVD4811 | Category: Dome | Filters: 4MP, Motorized, AI, Super Low Lux, WDR Pro, 3 Axis, IP66, IK10, Pigtail-Free, UL
+GV-TVD4810 | Category: Dome | Filters: 4MP, Motorized, AI, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TVD4711 | Category: Dome | Filters: 4MP, Motorized, UL, Super Low Lux, WDR Pro, 3 Axis, IP66, IK10, Pigtail-Free
+GV-TVD4710 | Category: Dome | Filters: 4MP, Motorized, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-TVD4700 | Category: Dome | Filters: 4MP, Vari-Focal, UL, Super Low Lux, 3 Axis, IP67, IK10
+GV-AVD2700 | Category: Dome | Filters: 2MP, Vari-Focal, UL, WDR Pro, 3 Axis, IP67, IK10
+GV-FD8700-FR | Category: Dome | Filters: 8MP, Vari-Focal, Face Recognition, 3 Axis
+GV-EFD4700 | Category: Dome | Filters: 4MP, Fixed, Super Low Lux, WDR Pro
+GV-TVD2712 | Category: Dome | Filters: 2MP, Motorized, UL, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10
+GV-VD2712 | Category: Dome | Filters: 2MP, Motorized, Starlight, WDR Pro, 3 Axis, IP67, IK10
+GV-VD2702 | Category: Dome | Filters: 2MP, Vari-Focal, Starlight, WDR Pro, 3 Axis, IP67, IK10
+GV-GBLN4800 | Category: Bullet | Filters: 4MP, Fixed, AI, AI-ISP, Full Color, WDR Pro, IP67, IK10
+GV‐GBLF2802 | Category: Bullet | Filters: 2MP, Fixed, AI, Full Color, Super Low Lux, WDR Pro, IP67, IK10
+GV-GBL12811 | Category: Bullet | Filters: 12MP, Motorized, AI, Super Low Lux, IP67, IK10
+GV-GBL4911 | Category: Bullet | Filters: 4MP, Motorized, Cloud, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-GBL4900 | Category: Bullet | Filters: 4MP, Fixed, Cloud, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-RBL5811 | Category: Bullet | Filters: 5MP, Motorized, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-BLFC5800 | Category: Bullet | Filters: 5MP, Fixed, AI, UL, Full Color, Super Low Lux, WDR Pro, IP67, IK10
+GV-TBL8804 | Category: Bullet | Filters: 8MP, Fixed, AI, UL, Full Color, Active Deterrence, Super Low Lux, WDR Pro, IP67
+GV-TBL8810 | Category: Bullet | Filters: 8MP, Motorized, AI, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-TBL8710 | Category: Bullet | Filters: 8MP, Motorized, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-TBL4810 | Category: Bullet | Filters: 4MP, Motorized, AI, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-TBL4807 | Category: Bullet | Filters: 4MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, UL
+GV-TBL4711 | Category: Bullet | Filters: 4MP, Motorized, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-TBL4705 | Category: Bullet | Filters: 4MP, Fixed, UL, Super Low Lux, WDR Pro, IP67
+GV-TBL4703 | Category: Bullet | Filters: 4MP, Fixed, UL, Super Low Lux, IP67
+GV-TBL4700 | Category: Bullet | Filters: 4MP, Vari-Focal, UL, Super Low Lux, IP67, IK10
+GV-TBL2718 | Category: Bullet | Filters: 2MP, Motorized, UL, Super Low Lux, WDR Pro, IP67
+GV-TBL2706 | Category: Bullet | Filters: 2MP, Fixed, UL, WDR Pro, IP67
+GV-TBL2705 | Category: Bullet | Filters: 2MP, Fixed, UL, WDR Pro, IP67
+GV-ABL4712 | Category: Bullet | Filters: 4MP, Motorized, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-ABL4701 Series | Category: Bullet | Filters: 4MP, Fixed, UL, Super Low Lux, IP66
+GV-RFER12700 | Category: Fisheye | Filters: 12MP, Fixed, Super Low Lux, IP66
+GV-PFER12800 | Category: Fisheye | Filters: 12MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-QFER12700 | Category: Fisheye | Filters: 12MP, Fixed, IP66, IK10
+GV-FER12700 | Category: Fisheye | Filters: 12MP, Fixed, IP67, IK10+
+GV-GFER12800 | Category: Fisheye | Filters: 12MP, Fixed, AI, Super Low Lux, IP67, IK10
+GV-GFER6900 | Category: Fisheye | Filters: 6MP, Fixed, Cloud, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-FER5702 | Category: Fisheye | Filters: 5MP, Fixed, UL, Super Low Lux, WDR Pro, IP66, IK10
+GV-TMS20811 | Category: Multi-sensor / Panoramic | Filters: 4*5MP, Motorized, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10, UL
+GV-TMS8800 | Category: Multi-sensor / Panoramic | Filters: 2*4MP, Fixed, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10, UL
+GV-PDR8800 | Category: Multi-sensor / Panoramic | Filters: 8MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, IK10
+GV-EBDP8800 | Category: Multi-sensor / Panoramic | Filters: 8MP, Fixed, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10, UL
+GV-EBDP5800 | Category: Multi-sensor / Panoramic | Filters: 5MP, Fixed, AI, Super Low Lux, WDR Pro, 3 Axis, IP67, IK10, UL
+GV-PBL8800 | Category: Multi-sensor / Panoramic | Filters: 8MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, IK10, Pigtail-Free
+GV-TBLP8800 | Category: Multi-sensor / Panoramic | Filters: 8MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, UL
+GV-TBLP5800 | Category: Multi-sensor / Panoramic | Filters: 5MP, Fixed, AI, Super Low Lux, WDR Pro, IP67, UL
+GV-TMEB5800 | Category: Thermal | Filters: 5MP, Fixed, AI, Active Deterrence, Super Low Lux, WDR Pro, 3 Axis, IP66
+GV-BX4802 | Category: Box | Filters: 4MP, AI, Super Low Lux, WDR Pro
+GV-BX2802 | Category: Box | Filters: 2MP, AI, Super Low Lux, WDR Pro
+GV-BX12201 | Category: Box | Filters: 12MP, Vari-Focal
+GV-BX4700 | Category: Box | Filters: 4MP, Vari-Focal, Face Detection, Super Low Lux, WDR Pro
+GV-BX2700-FD | Category: Box | Filters: 2MP, Vari-Focal, Face Detection, Starlight, WDR Pro
+GV-PTZ5810-IR | Category: PTZ | Filters: 5MP, Motorized, AI, UL, Super Low Lux, WDR Pro
+GV-GPTZ4810 | Category: PTZ | Filters: 4MP, Motorized, AI, Super Low Lux, IP67, IK10
+GV-SD4834-IR | Category: IP Speed Dome | Filters: 4MP, Motorized, AI, UL, Super Low Lux, WDR Pro, IP66, IK10
+GV-SD4825-IR | Category: IP Speed Dome | Filters: 4MP, Motorized, AI, UL, Super Low Lux, WDR Pro, IP67, IK10
+GV-SD2722-IR | Category: IP Speed Dome | Filters: 2MP, Motorized, UL, Super Low Lux, WDR Pro, IP66, IK10
+GV-QSD5731-IR | Category: IP Speed Dome | Filters: 5MP, Motorized, IoT Cyber Security, WDR Pro, IP66, IK10
+GV-QSD5730-Indoor | Category: IP Speed Dome | Filters: 5MP, Motorized, IoT Cyber Security, WDR Pro
+GV-3D People Counter V3 | Category: 3D People Counter | Filters: 4MP, Fixed, AI, WDR Pro, IP66
+GV-3D People Counter V2 | Category: 3D People Counter | Filters: 
+GV-Cloud Bridge Pro | Category: Accessories | Filters: Cloud, AI
+GV-Cloud Bridge | Category: Accessories | Filters: Cloud
+GV-Housing104 | Category: Accessories | Filters: IP68, IK10
+GV-Housing102 | Category: Accessories | Filters: IP67, IK10
+GV-WiFi Adaptor V2 | Category: Accessories | Filters: 
+GV-Joystick V3 | Category: Accessories | Filters: Windows 11 64-bit
+GV-Joystick V2 | Category: Accessories | Filters: Windows 10 32 / 64-bit
+GV-GPH2800 | Category: Pinhole | Filters: 2MP, Fixed, AI, Super Low Lux, WDR Pro

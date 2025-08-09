@@ -1,0 +1,23 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/chat/handoff/route": "/api/chat/handoff",
+  "/api/company/route": "/api/company",
+  "/api/chat/response/route": "/api/chat/response",
+  "/api/contact/route": "/api/contact",
+  "/api/monitoring-signup/route": "/api/monitoring-signup",
+  "/api/products/[id]/route": "/api/products/[id]",
+  "/api/products/compare/route": "/api/products/compare",
+  "/api/products/route": "/api/products",
+  "/api/support/route": "/api/support",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/page": "/",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/monitoring/signup/page": "/monitoring/signup",
+  "/products/[productId]/page": "/products/[productId]",
+  "/products/compare/page": "/products/compare",
+  "/products/page": "/products",
+  "/services/page": "/services",
+  "/support/page": "/support"
+}
