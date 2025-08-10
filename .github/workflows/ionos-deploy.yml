@@ -1,6 +1,16 @@
 name: IONOS Deploy Now
 
 on:
+  workflow_call:
+    inputs:
+      build-command:
+        type: string
+        required: false
+        default: 'npm run build'
+      node-version:
+        type: string
+        required: false
+        default: '18'
   push:
     branches: [ main ]
   workflow_dispatch:
