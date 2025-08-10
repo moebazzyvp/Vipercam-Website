@@ -52,4 +52,4 @@ jobs:
         retention-days: 1
 
     # Note: IONOS Deploy Now automatically detects and deploys from uploaded artifacts
-    # No additional deployment step needed
+    # No additional deployment step needed - Triggering deployment now
