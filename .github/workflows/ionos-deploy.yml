@@ -51,9 +51,5 @@ jobs:
           package.json
         retention-days: 1
 
-    # IONOS Deploy Now integration
-    - name: Deploy to IONOS
-      uses: ionos-deploy-now/artifact-action@v1
-      with:
-        token: ${{ secrets.IONOS_TOKEN }}
-        project: Vipercam-Website
+    # Note: IONOS Deploy Now automatically detects and deploys from uploaded artifacts
+    # No additional deployment step needed
