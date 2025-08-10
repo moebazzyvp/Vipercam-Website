@@ -7,4 +7,4 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/Vipercam-Website-build.yaml
+    uses: ./.github/workflows/ionos-deploy.yml
