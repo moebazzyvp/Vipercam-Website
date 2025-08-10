@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
+import twilio from "twilio"
+import sgMail from "@sendgrid/mail"
 
 interface HandoffRequest {
   conversationId: string
@@ -25,7 +27,12 @@ interface StaffNotification {
 
 // In a real implementation, these would be environment variables
 const STAFF_EMAIL = process.env.STAFF_EMAIL || "support@vipercam.net"
-const STAFF_PHONE = process.env.STAFF_PHONE || "(313) 800-3871"
+const STAFF_PHONES = [
+  process.env.STAFF_PHONE_1,
+  process.env.STAFF_PHONE_2,
+  process.env.STAFF_PHONE_3,
+  process.env.STAFF_PHONE_4
+].filter(Boolean) // Remove any undefined values
 const TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID
 const TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN
 const TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER
@@ -100,7 +107,13 @@ function determineUrgency(message: string, reason: string): 'low' | 'medium' | '
 
 async function sendEmailNotification(notification: StaffNotification): Promise<void> {
   try {
-    // In a real implementation, you would use a service like SendGrid, AWS SES, or Nodemailer
+    if (!process.env.SENDGRID_API_KEY) {
+      console.log("SendGrid API key not configured, skipping email notification")
+      return
+    }
+
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
     const emailContent = `
 New Support Request from Website Chat
 
@@ -118,14 +131,20 @@ The response will be automatically sent to the customer's chat.
 
 ---
 Vipercam Support Team
-Phone: (313) 800-3871
-Email: support@vipercam.net
+Phone: ${STAFF_PHONES[0] || '(313) 800-3871'}
+Email: ${STAFF_EMAIL}
     `.trim()
 
-    console.log(`Email notification would be sent to ${STAFF_EMAIL}:`, emailContent)
-    
-    // TODO: Implement actual email sending
-    // await sendEmail(STAFF_EMAIL, "New Support Request - Website Chat", emailContent)
+    const msg = {
+      to: STAFF_EMAIL,
+      from: 'noreply@vipercam.net', // This should be a verified sender in SendGrid
+      subject: `New Support Request - ${notification.urgency.toUpperCase()} Priority`,
+      text: emailContent,
+      html: emailContent.replace(/\n/g, '<br>')
+    }
+
+    await sgMail.send(msg)
+    console.log(`Email notification sent to ${STAFF_EMAIL}`)
     
   } catch (error) {
     console.error("Failed to send email notification:", error)
@@ -139,6 +158,13 @@ async function sendSMSNotification(notification: StaffNotification): Promise<voi
       console.log("Twilio credentials not configured, skipping SMS notification")
       return
     }
+
+    if (STAFF_PHONES.length === 0) {
+      console.log("No staff phone numbers configured, skipping SMS notification")
+      return
+    }
+
+    const client = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
     const urgencyEmoji = {
       low: '🟢',
@@ -155,15 +181,20 @@ Message: ${notification.customerMessage.substring(0, 100)}${notification.custome
 
 Reply to this number to respond to the customer.`
 
-    console.log(`SMS notification would be sent to ${STAFF_PHONE}:`, smsMessage)
-    
-    // TODO: Implement actual SMS sending with Twilio
-    // const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-    // await client.messages.create({
-    //   body: smsMessage,
-    //   from: TWILIO_PHONE_NUMBER,
-    //   to: STAFF_PHONE
-    // })
+    // Send SMS to all staff phone numbers
+    for (const staffPhone of STAFF_PHONES) {
+      try {
+        await client.messages.create({
+          body: smsMessage,
+          from: TWILIO_PHONE_NUMBER,
+          to: staffPhone
+        })
+        console.log(`SMS notification sent to ${staffPhone}`)
+      } catch (smsError) {
+        console.error(`Failed to send SMS to ${staffPhone}:`, smsError)
+        // Continue with other phone numbers even if one fails
+      }
+    }
     
   } catch (error) {
     console.error("Failed to send SMS notification:", error)

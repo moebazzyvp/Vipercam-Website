@@ -79,10 +79,11 @@ export async function GET() {
           description: "Celebrating two decades of protecting Detroit and surrounding areas with cutting-edge security solutions."
         }
       ],
-      contactInfo: {
-        phone: "(313) 800-3871",
-        email: "support@vipercam.net",
-        location: "Detroit, Michigan"
+      contact: {
+        phone: process.env.STAFF_PHONE_1 || "(313) 800-3871",
+        email: process.env.STAFF_EMAIL || "support@vipercam.net",
+        address: "Detroit, Michigan",
+        website: "https://vipercam.net"
       }
     }
 
