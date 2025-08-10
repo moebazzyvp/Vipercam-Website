@@ -3,7 +3,12 @@ name: Vipercam Website Orchestration
 on:
   push:
     branches: [ main ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
+  # IONOS Deploy Now bot trigger
+  repository_dispatch:
+    types: [ionos-deploy]
 
 jobs:
   build:
