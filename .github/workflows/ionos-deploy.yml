@@ -25,9 +25,12 @@ jobs:
     - name: Build application
       run: npm run build
       
-    - name: Deploy to IONOS
-      uses: ionos-deploy-now/artifact-action@v1
+    - name: List build artifacts
+      run: ls -la .next/
+      
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
       with:
-        token: ${{ secrets.IONOS_TOKEN }}
-        project: vipercamsecurity.com
-        branch: main
+        name: build-files
+        path: .next/
+        retention-days: 1
