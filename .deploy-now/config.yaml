@@ -1,0 +1,7 @@
+# IONOS Deploy Now Root Configuration
+# This file tells IONOS which project to deploy
+
+projects:
+  - name: Vipercam-Website
+    path: ./Vipercam-Website
+    config: ./Vipercam-Website/config.yaml

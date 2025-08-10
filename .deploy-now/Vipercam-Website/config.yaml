@@ -1,0 +1,38 @@
+# IONOS Deploy Now Configuration
+# This file tells IONOS how to build and deploy your Next.js app
+
+# Build configuration
+build:
+  # Use Node.js 18
+  node-version: "18"
+  
+  # Install dependencies
+  install:
+    - npm ci --legacy-peer-deps
+  
+  # Build command
+  build:
+    - npm run build
+  
+  # Output directory
+  output: .next
+
+# Runtime configuration
+runtime:
+  # Use Node.js
+  type: nodejs
+  
+  # Start command
+  start: npm start
+  
+  # Environment
+  env:
+    NODE_ENV: production
+
+# Deployment settings
+deploy:
+  # Auto-deploy on push to main
+  auto: true
+  
+  # Branch to deploy from
+  branch: main
