@@ -11,6 +11,15 @@ on:
         type: string
         required: false
         default: '18'
+    secrets:
+      IONOS_SERVICE_HOST:
+        required: true
+      IONOS_API_KEY:
+        required: true
+      IONOS_PROJECT_ID:
+        required: true
+      IONOS_BRANCH_ID:
+        required: true
   push:
     branches: [ main ]
   workflow_dispatch:
