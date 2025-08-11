@@ -61,23 +61,12 @@ jobs:
     - name: List build artifacts
       run: ls -la .next/
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: build-files
-        path: |
-          .next/
-          public/
-          package.json
-        retention-days: 1
-
     # Deploy to IONOS Deploy Now
     - name: Deploy to IONOS
-      uses: ionos-deploy-now/artifact-action@v1
+      uses: ionos-deploy-now/action@v1
       with:
         service-host: ${{ secrets.IONOS_SERVICE_HOST }}
         api-key: ${{ secrets.IONOS_API_KEY }}
         project-id: ${{ secrets.IONOS_PROJECT_ID }}
         branch-id: ${{ secrets.IONOS_BRANCH_ID }}
-        action: upload
         version: ${{ github.sha }}
