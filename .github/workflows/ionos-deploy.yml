@@ -1,25 +1,6 @@
 name: IONOS Deploy Now
 
 on:
-  workflow_call:
-    inputs:
-      build-command:
-        type: string
-        required: false
-        default: 'npm run build'
-      node-version:
-        type: string
-        required: false
-        default: '18'
-    secrets:
-      IONOS_SERVICE_HOST:
-        required: true
-      IONOS_API_KEY:
-        required: true
-      IONOS_PROJECT_ID:
-        required: true
-      IONOS_BRANCH_ID:
-        required: true
   push:
     branches: [ main ]
   workflow_dispatch:
@@ -49,7 +30,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ inputs.node-version || '18' }}
+        node-version: '18'
         cache: 'npm'
 
     - name: Install dependencies
