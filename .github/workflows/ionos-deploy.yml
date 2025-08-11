@@ -73,7 +73,7 @@ jobs:
 
     # Deploy to IONOS Deploy Now using artifact action
     - name: Deploy to IONOS
-      uses: ionos-deploy-now/artifact-action@v1
+      uses: ionos-deploy-now/artifact-action@v2
       with:
         service-host: ${{ secrets.IONOS_SERVICE_HOST }}
         api-key: ${{ secrets.IONOS_API_KEY }}
