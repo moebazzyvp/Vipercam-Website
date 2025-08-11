@@ -13,3 +13,8 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/ionos-deploy.yml
+    secrets:
+      IONOS_SERVICE_HOST: ${{ secrets.IONOS_SERVICE_HOST }}
+      IONOS_API_KEY: ${{ secrets.IONOS_API_KEY }}
+      IONOS_PROJECT_ID: ${{ secrets.IONOS_PROJECT_ID }}
+      IONOS_BRANCH_ID: ${{ secrets.IONOS_BRANCH_ID }}
