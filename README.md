@@ -22,3 +22,4 @@ A modern security camera and monitoring solutions website built with Next.js.
 This project is configured for deployment to IONOS Deploy Now with automated CI/CD via GitHub Actions.
 
 <!-- Trigger deployment test -->
+<!-- Triggering IONOS deployment at: 2025-01-27 -->
