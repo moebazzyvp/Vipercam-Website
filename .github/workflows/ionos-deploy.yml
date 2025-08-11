@@ -34,6 +34,17 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        submodules: false
+
+    - name: Remove .gitmodules if exists
+      run: |
+        if [ -f .gitmodules ]; then
+          echo "Removing .gitmodules file"
+          rm -f .gitmodules
+        else
+          echo "No .gitmodules file found"
+        fi
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -68,5 +79,5 @@ jobs:
         api-key: ${{ secrets.IONOS_API_KEY }}
         project-id: ${{ secrets.IONOS_PROJECT_ID }}
         branch-id: ${{ secrets.IONOS_BRANCH_ID }}
-        action: deploy
+        action: upload
         version: ${{ github.sha }}
