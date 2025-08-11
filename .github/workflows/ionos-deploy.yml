@@ -60,3 +60,4 @@ jobs:
         project-id: ${{ secrets.IONOS_PROJECT_ID }}
         branch-id: ${{ secrets.IONOS_BRANCH_ID }}
         action: deploy
+        version: ${{ github.sha }}
