@@ -1,4 +1,4 @@
-name: IONOS Deploy Now
+name: IONOS Deploy Now - Vipercam Website
 
 on:
   push:
