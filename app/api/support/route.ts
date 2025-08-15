@@ -54,12 +54,17 @@ export async function GET() {
         icon: "🚀"
       }
     ],
-    contact: {
+    contactInfo: {
       phone: process.env.STAFF_PHONE_1 || "(313) 800-3871",
+      emergencyPhone: "(313) 258-6000",
       email: process.env.STAFF_EMAIL || "support@vipercam.net",
-      hours: "24/7 Support Available"
+      hours: "Mon-Fri, 9am-5pm EST",
+      emergencyHours: "Available 24/7"
     }
   }
 
-  return NextResponse.json(supportData)
+  return NextResponse.json({
+    success: true,
+    data: supportData
+  })
 } 

@@ -41,7 +41,7 @@ export default function AboutClientPage() {
     )
   }
 
-  const { stats, teamMembers, companyValues, milestones, contactInfo } = companyData
+  const { stats, teamMembers, companyValues, milestones, contactInfo } = companyData || {}
 
   return (
     <div className="min-h-screen bg-vipercam-dark pt-16">
@@ -84,28 +84,30 @@ export default function AboutClientPage() {
       </section>
 
       {/* Company Stats */}
-      <section className="py-16 bg-vipercam-gray">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.yearsExperience}</div>
-              <div className="text-gray-300">Years of Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.systemsInstalled}</div>
-              <div className="text-gray-300">Systems Installed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.supportAvailable}</div>
-              <div className="text-gray-300">Support Available</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.customerSatisfaction}</div>
-              <div className="text-gray-300">Customer Satisfaction</div>
+      {stats && (
+        <section className="py-16 bg-vipercam-gray">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.yearsExperience || "20+"}</div>
+                <div className="text-gray-300">Years of Experience</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.systemsInstalled || "1000+"}</div>
+                <div className="text-gray-300">Systems Installed</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.supportAvailable || "24/7"}</div>
+                <div className="text-gray-300">Support Available</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-vipercam-red mb-2">{stats.customerSatisfaction || "98%"}</div>
+                <div className="text-gray-300">Customer Satisfaction</div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Our Story */}
       <section className="py-20">
@@ -143,110 +145,116 @@ export default function AboutClientPage() {
       </section>
 
       {/* Meet the Team */}
-      <section className="py-20 bg-vipercam-gray">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our experienced team of security professionals is dedicated to providing you with the best possible
-              service and support.
-            </p>
-          </div>
+      {teamMembers && teamMembers.length > 0 && (
+        <section className="py-20 bg-vipercam-gray">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our experienced team of security professionals is dedicated to providing you with the best possible
+                service and support.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {teamMembers.map((member, index) => (
-              <Card
-                key={index}
-                className="bg-vipercam-dark border-vipercam-gray-light hover:border-vipercam-red transition-colors duration-300"
-              >
-                <CardContent className="p-6 text-center">
-                  <div className="mb-6">
-                    <Image
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      width={120}
-                      height={120}
-                      className="rounded-full mx-auto border-4 border-vipercam-red"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-vipercam-red font-medium mb-4">{member.role}</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our commitment to excellence in security solutions.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => {
-              const IconComponent = iconMap[value.title as keyof typeof iconMap] || Shield
-              return (
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {teamMembers.map((member, index) => (
                 <Card
                   key={index}
-                  className="bg-vipercam-gray border-vipercam-gray-light hover:border-vipercam-red transition-all duration-300 hover:shadow-lg"
+                  className="bg-vipercam-dark border-vipercam-gray-light hover:border-vipercam-red transition-colors duration-300"
                 >
                   <CardContent className="p-6 text-center">
-                    <div className="mb-4">
-                      <IconComponent className="h-12 w-12 text-vipercam-red mx-auto" />
+                    <div className="mb-6">
+                      <Image
+                        src={member.image || "/placeholder.svg"}
+                        alt={member.name}
+                        width={120}
+                        height={120}
+                        className="rounded-full mx-auto border-4 border-vipercam-red"
+                      />
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                    <p className="text-vipercam-red font-medium mb-4">{member.role}</p>
+                    <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
                   </CardContent>
                 </Card>
-              )
-            })}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
+
+      {/* Company Values */}
+      {companyValues && companyValues.length > 0 && (
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                The principles that guide everything we do and shape our commitment to excellence in security solutions.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {companyValues.map((value, index) => {
+                const IconComponent = iconMap[value.title as keyof typeof iconMap] || Shield
+                return (
+                  <Card
+                    key={index}
+                    className="bg-vipercam-gray border-vipercam-gray-light hover:border-vipercam-red transition-all duration-300 hover:shadow-lg"
+                  >
+                    <CardContent className="p-6 text-center">
+                      <div className="mb-4">
+                        <IconComponent className="h-12 w-12 text-vipercam-red mx-auto" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
+                      <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Company Timeline */}
-      <section className="py-20 bg-vipercam-gray">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our 20-year journey of innovation and growth in the security industry.
-            </p>
-          </div>
+      {milestones && milestones.length > 0 && (
+        <section className="py-20 bg-vipercam-gray">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Journey</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Key milestones in our 20-year journey of innovation and growth in the security industry.
+              </p>
+            </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-vipercam-red hidden md:block"></div>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative">
+                {/* Timeline line */}
+                <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-vipercam-red hidden md:block"></div>
 
-              <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={index} className="relative flex items-start">
-                    {/* Timeline dot */}
-                    <div className="hidden md:flex absolute left-6 w-4 h-4 bg-vipercam-red rounded-full border-4 border-vipercam-dark"></div>
+                <div className="space-y-8">
+                  {milestones.map((milestone, index) => (
+                    <div key={index} className="relative flex items-start">
+                      {/* Timeline dot */}
+                      <div className="hidden md:flex absolute left-6 w-4 h-4 bg-vipercam-red rounded-full border-4 border-vipercam-dark"></div>
 
-                    {/* Content */}
-                    <div className="md:ml-16 bg-vipercam-dark rounded-lg p-6 border border-vipercam-gray-light hover:border-vipercam-red transition-colors duration-300">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-white">{milestone.title}</h3>
-                        <Badge className="bg-vipercam-red text-white w-fit">{milestone.year}</Badge>
+                      {/* Content */}
+                      <div className="md:ml-16 bg-vipercam-dark rounded-lg p-6 border border-vipercam-gray-light hover:border-vipercam-red transition-colors duration-300">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                          <h3 className="text-xl font-semibold text-white">{milestone.title}</h3>
+                          <Badge className="bg-vipercam-red text-white w-fit">{milestone.year}</Badge>
+                        </div>
+                        <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
                       </div>
-                      <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-br from-vipercam-dark via-vipercam-gray to-vipercam-dark">
@@ -270,20 +278,22 @@ export default function AboutClientPage() {
             </Button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
-              <Phone className="h-5 w-5 text-vipercam-red" />
-              <span>{contactInfo.phone}</span>
+          {contactInfo && (
+            <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center space-x-2 text-gray-300">
+                <Phone className="h-5 w-5 text-vipercam-red" />
+                <span>{contactInfo.phone || "Contact us for phone number"}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2 text-gray-300">
+                <Mail className="h-5 w-5 text-vipercam-red" />
+                <span>{contactInfo.email || "Contact us for email"}</span>
+              </div>
+              <div className="flex items-center justify-center space-x-2 text-gray-300">
+                <MapPin className="h-5 w-5 text-vipercam-red" />
+                <span>{contactInfo.location || "Contact us for location"}</span>
+              </div>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
-              <Mail className="h-5 w-5 text-vipercam-red" />
-              <span>{contactInfo.email}</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 text-gray-300">
-              <MapPin className="h-5 w-5 text-vipercam-red" />
-              <span>{contactInfo.location}</span>
-            </div>
-          </div>
+          )}
         </div>
       </section>
     </div>
