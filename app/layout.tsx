@@ -11,6 +11,7 @@ import { SWRConfig } from "swr"
 import { swrConfig } from "@/lib/swr-config"
 import { cn } from "@/lib/utils"
 import { ChatProvider } from "@/context/ChatContext"
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({
             </ChatProvider>
           </SWRConfig>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
